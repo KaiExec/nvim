@@ -38,6 +38,9 @@ keymap.set(nv, "K", "5j", opts)
 keymap.set({"n","x","o"}, "J", "^", opts)
 keymap.set({"n","x","o"}, "L", "$", opts)
 
+--Copy
+keymap.set("n","Y", "^y$", opts)
+
 
 -- keymap.set("n", "<leader>S", ":%s/\\r//g<CR>", opts)     For Windows
 
@@ -47,3 +50,7 @@ keymap.set(nv,"<leader><CR>",":nohlsearch<CR>")
 -- keymap.set("n","<leader>y", nvim-surround.config.add,opts)
 vim.keymap.set("n", "<C-S-i>", [[<cmd>vertical resize +5<cr>]]) -- make the window biger vertically
 vim.keymap.set("n", "<C-S-k>", [[<cmd>vertical resize -5<cr>]]) -- make the window smaller vertically
+
+
+keymap.set("n","-", "n", opts)
+keymap.set("n","_", "N", opts)
