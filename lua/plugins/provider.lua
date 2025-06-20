@@ -42,5 +42,9 @@ return
                     desc = "Buffer Local Keymaps (which-key)",
                 },
             },
+        },
+        {
+            "mason-org/mason.nvim",
+            opts = {}
         }
     }
