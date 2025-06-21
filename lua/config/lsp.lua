@@ -18,7 +18,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
         -- Diagnostics Line
         vim.keymap.set('n', '<leader>ld', function()
             vim.diagnostic.open_float { source = true }
-        end, { buffer = args.buf, desc = 'LSP: Goto Declaration' })
+        end, { buffer = args.buf, desc = 'LSP: Diagnostics Line' })
         -- Toggle Diagnostics
         vim.keymap.set(
             'n',
