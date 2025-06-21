@@ -41,5 +41,13 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set('n', '<leader><leader>f', function()
             vim.lsp.buf.format({ async = false })
         end, { buffer = args.buf, desc = 'LSP: Goto Definition' })
+vim.diagnostic.config({
+    signs = {
+        text = {
+            [vim.diagnostic.severity.WARN] = '',
+            [vim.diagnostic.severity.ERROR] = '',
+        },
+    }
+})
     end,
 })
