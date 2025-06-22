@@ -9,7 +9,15 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set('n', 'rn', vim.lsp.buf.rename, { buffer = args.buf, desc = 'LSP: Rename' })
         -- Diagnostics
         vim.diagnostic.config {
-            virtual_text = true,
+            virtual_text = {
+                prefix = ''
+            },
+            signs = {
+                text = {
+                    [vim.diagnostic.severity.WARN] = '',
+                    [vim.diagnostic.severity.ERROR] = '',
+                },
+            }
         }
         -- InlayHint if passible
         if client and client:supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint) then
@@ -41,13 +49,5 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set('n', '<leader><leader>f', function()
             vim.lsp.buf.format({ async = false })
         end, { buffer = args.buf, desc = 'LSP: Goto Definition' })
-vim.diagnostic.config({
-    signs = {
-        text = {
-            [vim.diagnostic.severity.WARN] = '',
-            [vim.diagnostic.severity.ERROR] = '',
-        },
-    }
-})
     end,
 })
