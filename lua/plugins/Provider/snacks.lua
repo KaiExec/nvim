@@ -25,6 +25,8 @@ return
                             ["k"] = "list_down",
                             ["I"] = { "list_scroll_up", mode = { "i", "n" } },
                             ["K"] = { "list_scroll_down", mode = { "i", "n" } },
+                            ["<c-i>"] = { "preview_scroll_up", mode = { "i", "n" } },
+                            ["<c-k>"] = { "preview_scroll_down", mode = { "i", "n" } },
                         }
                     }
                 }
