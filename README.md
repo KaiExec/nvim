@@ -1,6 +1,9 @@
 ## Start
 
-git clone git@github.com:KaiExec/nvim.git
+Start with command below:
+```
+git clone git@github.com:KaiExec/nvim.git ~/.config/nvim
+```
 
 ## Before use it
 
@@ -21,4 +24,19 @@ Please comment the code in *~/.local/share/nvim/lazy/snacks.nvim/lua/snacks/scop
         desc = "full scope",
       },
     },
+```
+
+## Usage
+
+### Cursor moving
+
+```
+                       i
+            -->
+                 j   k   l
+
+
+     5                    I
+                -->
+5   5   5           J   K   L
 ```
