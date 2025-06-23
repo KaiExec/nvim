@@ -24,7 +24,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
             vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = args.buf })
         end
         -- Diagnostics Line
-        vim.keymap.set('n', '<leader>ld', function()
+        vim.keymap.set('n', '<leader>dl', function()
             vim.diagnostic.open_float { source = true }
         end, { buffer = args.buf, desc = 'LSP: Diagnostics Line' })
         -- Toggle Diagnostics
@@ -46,8 +46,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
             { buffer = args.buf, desc = 'LSP: Toggle diagnostics display' }
         )
         -- Format code
-        vim.keymap.set('n', '<leader><leader>f', function()
+        vim.keymap.set('n', '<leader>ff', function()
             vim.lsp.buf.format({ async = false })
-        end, { buffer = args.buf, desc = 'LSP: Goto Definition' })
+        end, { buffer = args.buf, desc = 'LSP: Format code' })
     end,
 })
