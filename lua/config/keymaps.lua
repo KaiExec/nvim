@@ -52,3 +52,7 @@ keymap.set("n", "<C-S-k>", [[<cmd>vertical resize -5<cr>]]) -- make the window s
 -- Search
 keymap.set("n", "-", "n", opts)
 keymap.set("n", "_", "N", opts)
+
+-- Add a line
+keymap.set("n", "o", "o<Esc>", opts)
+keymap.set("n", "O", "O<Esc>", opts)
