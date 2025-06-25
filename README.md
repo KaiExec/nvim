@@ -31,12 +31,9 @@ textobject = {
 ### Cursor moving
 
 ```
-                       i
-            -->
-                 j   k   l
-
-
-     5                    I
-                -->
-5   5   5           J   K   L
+    ^
+    i
+< j   l >
+    k
+    v
 ```
