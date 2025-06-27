@@ -11,6 +11,7 @@ return
         -- A list of parser names, or "all" (the listed parsers MUST always be installed)
         ensure_installed = { "c", "lua", "markdown" },
         -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
+        ignore_install = { "tmux" },
         auto_install = true,
 
         ---- If you need to change the installation directory of the parsers (see -> Advanced Setup)

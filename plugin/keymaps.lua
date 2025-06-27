@@ -5,6 +5,14 @@ local opts = {
 local keymap = vim.keymap
 local nv = { "n", "v" }
 
+--AutoCMD
+vim.api.nvim_create_autocmd("BufEnter",{
+    pattern = {"*.c","*.cpp"},
+    callback = function()
+        vim.keymap.set("n", "<C-;>", "A;<Esc>", {noremap = true,silent = true})
+    end
+})
+
 ------ 插入模式 ------
 ---<tab>和<C-i>的ASCII码一致，使得这两个键位只能使用一个功能，扫码了...
 keymap.set("i", "<C-j>", "<Left>", opts)
