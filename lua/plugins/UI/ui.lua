@@ -9,9 +9,9 @@ return
             flavour = "mocha", -- latte, frappe, macchiato, mocha
             color_overrides = {
                 mocha = {
-                    base = "#000000",
-                    mantle = "#000000",
-                    crust = "#000000",
+                    base = "#201d2a",
+                    mantle = "#201d2a",
+                    crust = "#201d2a",
                 }
             },
             custom_highlights =  function(colors) -- Custom highlights
